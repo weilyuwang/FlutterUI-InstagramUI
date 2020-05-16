@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_instagram_ui/screens/view_post_screen.dart';
 import '../models/post_model.dart';
 
 class FeedScreen extends StatefulWidget {
@@ -63,7 +64,14 @@ class _FeedScreenState extends State<FeedScreen> {
                   ),
                   InkWell(
                     onDoubleTap: () => print('Like post'),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ViewPostScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       margin: EdgeInsets.all(10.0),
                       width: double.infinity,
@@ -113,7 +121,14 @@ class _FeedScreenState extends State<FeedScreen> {
                                 IconButton(
                                   icon: Icon(Icons.chat),
                                   iconSize: 30.0,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => ViewPostScreen(),
+                                      ),
+                                    );
+                                  },
                                 ),
                                 Text(
                                   '350',
