@@ -68,7 +68,9 @@ class _FeedScreenState extends State<FeedScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => ViewPostScreen(),
+                          builder: (_) => ViewPostScreen(
+                            post: posts[index],
+                          ),
                         ),
                       );
                     },
@@ -125,7 +127,8 @@ class _FeedScreenState extends State<FeedScreen> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (_) => ViewPostScreen(),
+                                        builder: (_) =>
+                                            ViewPostScreen(post: posts[index]),
                                       ),
                                     );
                                   },
